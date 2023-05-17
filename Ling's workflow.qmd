@@ -1,0 +1,32 @@
+---
+title: "workflow"
+format: html
+editor: visual
+---
+
+packages
+```{r}
+library(tidyverse)
+``` 
+
+data
+```{r}
+library(haven)
+dmae <- read_sas("https://github.com/philbowsher/Foundation-of-the-R-Workflow-workshop-2019-09-06/raw/master/Examples/data/dmae.sas7bdat", 
+    NULL)
+library(dplyr)
+library(ggplot2)
+
+dmae %>%
+ ggplot() +
+ aes(x = AESEV) +
+ geom_bar(fill = "#112446") +
+ theme_minimal()
+
+```
+
+ggplot2
+```{r}
+
+```
+
